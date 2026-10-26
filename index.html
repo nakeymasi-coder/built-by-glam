@@ -150,9 +150,14 @@ h2{font-size:clamp(29px,4.2vw,42px);text-align:center;color:var(--deep);margin:1
 
 /* work */
 .work-card{overflow:hidden;padding:0}
-.work-top{height:112px;display:grid;place-items:center;font-size:40px;color:#fff;background:linear-gradient(135deg,var(--sky),var(--sapphire),var(--deep))}
-.work-top.gold{background:linear-gradient(135deg,#141414,#3a2f00 55%,#d4af37)}
-.work-top.blush{background:linear-gradient(135deg,var(--sapphire),#9fd3ff 55%,#ffd0ea)}
+.work-img{width:100%;height:182px;object-fit:cover;object-position:top center;display:block;border-bottom:1px solid #dcebf7;transition:transform .35s}
+.work-card:hover .work-img{transform:scale(1.04)}
+.work-img-link{display:block;overflow:hidden}
+.visit{margin-top:14px;display:inline-flex;align-items:center;gap:7px;text-decoration:none;border-radius:999px;padding:10px 18px;font-family:Montserrat,sans-serif;font-weight:800;font-size:13.5px;color:#fff;background:linear-gradient(135deg,var(--sky),var(--sapphire) 55%,var(--deep));box-shadow:0 0 16px rgba(22,143,234,.4);transition:.22s}
+.visit:hover{transform:translateY(-2px);box-shadow:var(--glow)}
+.client-strip{margin-top:18px;background:linear-gradient(135deg,#141414,#3a2f00 60%,#8a6d1a);color:#fdf6dd;border-radius:22px;padding:22px 26px;box-shadow:var(--card-shadow)}
+.client-strip h3{color:#ffd94d;margin:0 0 6px}
+.client-strip p{margin:0;color:#f3e9c8;line-height:1.6;font-size:15px}
 .work-body{padding:20px 22px 23px}
 .pilltag{display:inline-block;background:var(--mist);color:var(--deep);border:1px solid var(--pale);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:800;margin-bottom:8px;font-family:Montserrat,sans-serif}
 .hidecard{display:none}
@@ -212,7 +217,7 @@ footer{padding:40px 0 52px;text-align:center}
       <h1>You run the business.<br><span class="grad">Glam builds the tech.</span></h1>
       <p class="lead">Built By Glam is the done-for-you tech studio for women building real businesses — websites, web apps, AI tools, and automations, handled start to finish. No tech talk. No being made to feel dumb. No struggling through it alone.</p>
       <div class="plain">
-        <p><strong>The difference, in plain words:</strong> Glam Hustle Hub teaches you to do it yourself. <strong>Built By Glam is for when you’d rather just hire Glam to do it for you.</strong> That’s what a tech agency is — a business other businesses pay to plan their tech, build it, launch it, and keep it running. And when somebody asks a client, “Who built your site?” her answer is the marketing: <em>“Built By Glam.”</em></p>
+        <p><strong>The difference, in plain words:</strong> <a href="https://glamhustlehub.com" target="_blank" rel="noopener" style="color:var(--sapphire);font-weight:800">Glam Hustle Hub</a> teaches you to do it yourself. <strong>Built By Glam is for when you’d rather just hire Glam to do it for you.</strong> That’s what a tech agency is — a business other businesses pay to plan their tech, build it, launch it, and keep it running. And when somebody asks a client, “Who built your site?” her answer is the marketing: <em>“Built By Glam.”</em></p>
       </div>
       <div class="cta-row">
         <a class="btn btn-primary" href="#estimator">✨ Build My Project Estimate</a>
@@ -325,7 +330,7 @@ footer{padding:40px 0 52px;text-align:center}
   <section id="work"><div class="wrap">
     <div class="kicker reveal">Proof, not promises</div>
     <h2 class="reveal">Real Work Glam Has Already Built</h2>
-    <p class="sub reveal">You’re not starting from zero. Filter it like a client would — tap a pill and watch the shelf rearrange.</p>
+    <p class="sub reveal">You’re not starting from zero. Every picture below is a <strong>real screenshot of the real build</strong> — tap any picture or button to open it live. Filter it like a client would.</p>
     <div class="tabrow reveal" id="workFilters">
       <button class="pillbtn active" data-filter="all">✦ All Work</button>
       <button class="pillbtn" data-filter="websites">🌐 Websites</button>
@@ -333,12 +338,16 @@ footer{padding:40px 0 52px;text-align:center}
       <button class="pillbtn" data-filter="systems">⚙️ Systems &amp; Forms</button>
     </div>
     <div class="grid g3" id="workGrid">
-      <div class="card work-card reveal" data-cat="websites"><div class="work-top gold">👕</div><div class="work-body"><span class="pilltag">Client Website</span><h3>3D Construction</h3><p>A client storefront for a 3D-printed clothing brand — “Hood Made. Bougie Paid.” Product catalog, shopping bag, brand story, and a custom-order form.</p></div></div>
-      <div class="card work-card reveal" data-cat="websites"><div class="work-top">🦋</div><div class="work-body"><span class="pilltag">Her Own Brand</span><h3>Glam Hustle Hub</h3><p>Glam’s own hub for beginner-friendly AI tools, prompt generators, classes, and shows for women 40+ — the business behind everything on this page.</p></div></div>
-      <div class="card work-card reveal" data-cat="apps"><div class="work-top blush">✨</div><div class="work-body"><span class="pilltag">Web App / Generator</span><h3>Prompt Generators &amp; Studios</h3><p>Clothing Brand Prompt Generator, Animated Greeting Studio, and more — custom tools her customers open, use, and pay for.</p></div></div>
-      <div class="card work-card reveal" data-cat="systems"><div class="work-top">📋</div><div class="work-body"><span class="pilltag">Forms &amp; Systems</span><h3>GlamForm Studio Forms</h3><p>Pretty, on-brand order and intake forms — proof Glam builds the working systems behind a business, not just the pretty front page.</p></div></div>
-      <div class="card work-card reveal" data-cat="apps systems"><div class="work-top">📊</div><div class="work-body"><span class="pilltag">Dashboards</span><h3>Command Centers &amp; Farms</h3><p>Full dashboards like the Glam Vault Community Command Center and the UGC / YouTube Farms — intake, queues, vaults, and workflows in one place.</p></div></div>
-      <div class="card work-card reveal" data-cat="apps"><div class="work-top gold">🎓</div><div class="work-body"><span class="pilltag">Family &amp; Community Apps</span><h3>Apps People Actually Use</h3><p>Big-letter, read-aloud apps for her mom Velma, reading adventures for her grandkids, and an accountability app — built for real people, not demos.</p></div></div>
+      <div class="card work-card reveal" data-cat="websites"><a class="work-img-link" href="https://glamhustlehub.com" target="_blank" rel="noopener"><img class="work-img" src="images/work-glam-hustle-hub.jpg" alt="Glam Hustle Hub — Glam's own website, showing her sapphire hero portrait with a butterfly"></a><div class="work-body"><span class="pilltag">Her Own Website</span><h3>Glam Hustle Hub</h3><p>Glam’s own hub — “Enter the Mansion” — for beginner-friendly AI tools, prompt generators, classes, and shows for women 40+. The business behind everything on this page.</p><a class="visit" href="https://glamhustlehub.com" target="_blank" rel="noopener">Visit Live ↗</a></div></div>
+      <div class="card work-card reveal" data-cat="apps"><a class="work-img-link" href="https://nakeymasi-coder.github.io/Glam-Animated-Greeting-Prompt-Generator/" target="_blank" rel="noopener"><img class="work-img" src="images/work-animated-greeting.jpg" alt="Animated Greeting Studio — Say it big. Make it move."></a><div class="work-body"><span class="pilltag">Web App / Studio</span><h3>Animated Greeting Studio</h3><p>“Say it big. Make it move.” A custom studio that turns a little message into bold animated greeting prompts — one of the tools her customers open, use, and pay for.</p><a class="visit" href="https://nakeymasi-coder.github.io/Glam-Animated-Greeting-Prompt-Generator/" target="_blank" rel="noopener">Visit Live ↗</a></div></div>
+      <div class="card work-card reveal" data-cat="systems"><a class="work-img-link" href="https://nakeymasi-coder.github.io/customize-my-build/" target="_blank" rel="noopener"><img class="work-img" src="images/work-customize-my-build.jpg" alt="Customize My Build — live order form"></a><div class="work-body"><span class="pilltag">Order Form / System</span><h3>Customize My Build</h3><p>A live order form that sells custom builds: pick your customizations, the price adds up as you go, and the order lands straight in Glam’s inbox. Proof she builds working systems, not just pretty pages.</p><a class="visit" href="https://nakeymasi-coder.github.io/customize-my-build/" target="_blank" rel="noopener">Visit Live ↗</a></div></div>
+      <div class="card work-card reveal" data-cat="apps systems"><a class="work-img-link" href="https://nakeymasi-coder.github.io/glam-vault-command-center/" target="_blank" rel="noopener"><img class="work-img" src="images/work-command-center.jpg" alt="The Glam Vault Community Command Center dashboard"></a><div class="work-body"><span class="pilltag">Dashboard</span><h3>Glam Vault Command Center</h3><p>A full community command center — member intake, work-hours planning, a resource vault, and a job queue, all in one beginner-friendly dashboard.</p><a class="visit" href="https://nakeymasi-coder.github.io/glam-vault-command-center/" target="_blank" rel="noopener">Visit Live ↗</a></div></div>
+      <div class="card work-card reveal" data-cat="apps"><a class="work-img-link" href="https://nakeymasi-coder.github.io/ugc-farm/" target="_blank" rel="noopener"><img class="work-img" src="images/work-ugc-farm.jpg" alt="UGC Farm — Y2K Gigapet-style creator dashboard"></a><div class="work-body"><span class="pilltag">Creator Dashboard</span><h3>UGC Farm</h3><p>A Y2K Gigapet-style production farm for creator videos — intake, character vault, products, scripts, solo agents, and a run queue. Playful on the outside, all business underneath.</p><a class="visit" href="https://nakeymasi-coder.github.io/ugc-farm/" target="_blank" rel="noopener">Visit Live ↗</a></div></div>
+      <div class="card work-card reveal" data-cat="apps"><a class="work-img-link" href="https://nakeymasi-coder.github.io/prompt-like-glam-workshop/zay-reading-adventure/" target="_blank" rel="noopener"><img class="work-img" src="images/work-zay-reading.jpg" alt="Zay's Reading Adventure — storybook reading app with Rex the dino"></a><div class="work-body"><span class="pilltag">Family Apps</span><h3>Zay’s Reading Adventure</h3><p>A storybook reading app built for her grandson Zay — tap-a-word read-aloud, sparkles, and stars. Same love went into big-letter apps for her mom Velma and Brina’s reading world.</p><a class="visit" href="https://nakeymasi-coder.github.io/prompt-like-glam-workshop/zay-reading-adventure/" target="_blank" rel="noopener">Visit Live ↗</a></div></div>
+    </div>
+    <div class="client-strip reveal">
+      <h3>👕 Client Work — 3D Construction</h3>
+      <p>Where the client work started: a full storefront for a 3D-printed clothing brand — “Hood Made. Bougie Paid.” — with a product catalog, shopping bag, brand story, and custom-order form. Its old share link has retired, so it’s told here as the story until it gets re-published with a fresh link and screenshot.</p>
     </div>
   </div></section>
 
