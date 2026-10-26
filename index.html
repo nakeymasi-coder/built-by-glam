@@ -193,7 +193,7 @@ footer{padding:40px 0 52px;text-align:center}
 </head>
 <body>
 
-<div class="demo-bar">✨ Demo Page — Public for Glam to Test &nbsp;•&nbsp; <span>Not taking clients yet</span> &nbsp;•&nbsp; Sample pricing is labeled as sample ✨</div>
+<div class="demo-bar">✨ Demo Page — Public Test &nbsp;•&nbsp; <span>Project form is wired &amp; live</span> &nbsp;•&nbsp; Sample pricing is labeled as sample ✨</div>
 
 <header><div class="nav">
   <a class="logo" href="#top">🦋 Built By Glam<small>Done-For-You Tech Studio</small></a>
@@ -248,6 +248,7 @@ footer{padding:40px 0 52px;text-align:center}
           <p id="svcDesc"></p>
           <p id="svcFor" style="font-weight:600;color:var(--deep)"></p>
           <span class="svc-price" id="svcPrice"></span>
+          <div style="margin-top:18px"><button class="btn btn-primary" id="svcStart" type="button" style="padding:12px 21px;font-size:14px">Start With This Service →</button></div>
         </div>
         <div class="getlist"><h4>What you get</h4><ul id="svcList"></ul></div>
       </div>
@@ -279,9 +280,9 @@ footer{padding:40px 0 52px;text-align:center}
       <span style="color:var(--sapphire)">Sample: +$149/month after launch</span>
     </div>
     <div class="grid g3" id="pkgGrid">
-      <div class="card pkg reveal tilt"><h3>Starter Page</h3><div class="price">$499 <small>sample</small></div><p>For a new business that needs to look real online, fast.</p><ul><li>1 landing or sales page</li><li>Phone-friendly design</li><li>Contact / order button</li><li>1 round of changes</li></ul><br><span class="support-line">✦ + $149/mo support (sample)</span></div>
-      <div class="card pkg popular reveal tilt"><span class="tag">Most Popular ✦ Sample</span><h3>Business Website</h3><div class="price">$1,499 <small>sample</small></div><p>For a business ready for a full home online.</p><ul><li>Up to 5 pages</li><li>Services + about + contact</li><li>Forms wired up</li><li>2 rounds of changes</li></ul><br><span class="support-line">✦ + $149/mo support (sample)</span></div>
-      <div class="card pkg reveal tilt"><h3>Custom Tool / App</h3><div class="price">$2,500+ <small>sample</small></div><p>For a generator, dashboard, or AI tool built just for you.</p><ul><li>Custom web app or AI tool</li><li>Your branding throughout</li><li>Launch check on phone + desktop</li><li>Training walkthrough</li></ul><br><span class="support-line">✦ + $149/mo support (sample)</span></div>
+      <div class="card pkg reveal tilt"><h3>Starter Page</h3><div class="price">$499 <small>sample</small></div><p>For a new business that needs to look real online, fast.</p><ul><li>1 landing or sales page</li><li>Phone-friendly design</li><li>Contact / order button</li><li>1 round of changes</li></ul><br><span class="support-line">✦ + $149/mo support (sample)</span><div style="margin-top:16px"><button class="btn btn-primary pkg-choose" type="button" data-pkg="Starter Page" data-price="$499" data-type="Landing page" style="padding:12px 20px;font-size:14px">Start With This Package →</button></div></div>
+      <div class="card pkg popular reveal tilt"><span class="tag">Most Popular ✦ Sample</span><h3>Business Website</h3><div class="price">$1,499 <small>sample</small></div><p>For a business ready for a full home online.</p><ul><li>Up to 5 pages</li><li>Services + about + contact</li><li>Forms wired up</li><li>2 rounds of changes</li></ul><br><span class="support-line">✦ + $149/mo support (sample)</span><div style="margin-top:16px"><button class="btn btn-primary pkg-choose" type="button" data-pkg="Business Website" data-price="$1,499" data-type="Website" style="padding:12px 20px;font-size:14px">Start With This Package →</button></div></div>
+      <div class="card pkg reveal tilt"><h3>Custom Tool / App</h3><div class="price">$2,500+ <small>sample</small></div><p>For a generator, dashboard, or AI tool built just for you.</p><ul><li>Custom web app or AI tool</li><li>Your branding throughout</li><li>Launch check on phone + desktop</li><li>Training walkthrough</li></ul><br><span class="support-line">✦ + $149/mo support (sample)</span><div style="margin-top:16px"><button class="btn btn-primary pkg-choose" type="button" data-pkg="Custom Tool / App" data-price="$2,500+" data-type="Web app / tool" style="padding:12px 20px;font-size:14px">Start With This Package →</button></div></div>
     </div>
   </div></section>
 
@@ -369,7 +370,7 @@ footer{padding:40px 0 52px;text-align:center}
       <div class="orb orb-a" style="opacity:.3"></div>
       <div class="kicker" style="color:var(--pale);text-align:left">Start a project 🦋</div>
       <h2>Tell Glam What You Want Built</h2>
-      <p>In the real version, this lands straight in Glam’s intake queue. In this demo, hit send and watch what a client would see — nothing actually sends.</p>
+      <p>Fill this out and hit send — it lands straight in Glam’s inbox, wired and live. Pick a package above or build an estimate first, and this form pre-fills itself for you.</p>
       <form id="intakeForm" novalidate>
         <div class="fields">
           <input type="text" id="fName" placeholder="Your name" autocomplete="name">
@@ -385,7 +386,7 @@ footer{padding:40px 0 52px;text-align:center}
           <textarea id="fMsg" placeholder="Tell us about your project — what should it do, and what does “done” look like?"></textarea>
         </div>
         <div class="cta-row" style="justify-content:flex-start;margin-top:20px">
-          <button class="btn btn-white" type="submit">Send My Project Request ✨ (Demo)</button>
+          <button class="btn btn-white" type="submit" id="sendBtn">Send My Project Request ✨</button>
         </div>
         <div class="success" id="formSuccess"></div>
       </form>
@@ -401,7 +402,7 @@ footer{padding:40px 0 52px;text-align:center}
     <a class="btn btn-primary" href="https://payhip.com/b/54LoK" target="_blank" rel="noopener">✨ Join The Glam Vault</a>
     <a class="btn btn-primary" href="https://glamhustlehub.com" target="_blank" rel="noopener">🛍️ Shop Glam Hustle Hub</a>
   </div>
-  <p class="fine">A show-me demo, public for Glam to test. Not taking clients through this page yet. Sample prices are examples only.<br>Made with ♥ by Indigo, Glam’s AI assistant • Built By Glam • By Glam, Founder of Glam Hustle Hub</p>
+  <p class="fine">Public test page — the project form is wired and lands in Glam’s inbox. Sample prices are examples only.<br>Made with ♥ by Indigo, Glam’s AI assistant • Built By Glam • By Glam, Founder of Glam Hustle Hub</p>
 </div></footer>
 
 <button id="toTop" type="button" aria-label="Back to top">🦋</button>
@@ -558,20 +559,67 @@ footer{padding:40px 0 52px;text-align:center}
     });
   });
 
-  /* intake form (demo) */
+  /* wiring: every CTA pre-fills the project form */
+  function esc(s){ return (s || "").replace(/</g,""); }
+  function prefill(type, line){
+    var sel = $("#fType");
+    if (type){ for (var i = 0; i < sel.options.length; i++){ if (sel.options[i].text === type){ sel.selectedIndex = i; break; } } }
+    var msg = $("#fMsg");
+    if (line && msg.value.indexOf(line) === -1){ msg.value = line + (msg.value ? "\n\n" + msg.value : ""); }
+    document.getElementById("start").scrollIntoView({behavior:"smooth"});
+    setTimeout(function(){ $("#fName").focus({preventScroll:true}); }, 650);
+  }
+  $$(".pkg-choose").forEach(function(b){
+    b.addEventListener("click", function(){
+      prefill(b.getAttribute("data-type"), "I'm interested in the " + b.getAttribute("data-pkg") + " package (sample price " + b.getAttribute("data-price") + "). Here's my project:");
+    });
+  });
+  var SVC_FORM = {websites:["Website","a Website"], apps:["Web app / tool","a Web App / Tool"], ai:["AI assistant / automation","an AI Assistant / Automation"], landing:["Landing page","a Landing Page"]};
+  $("#svcStart").addEventListener("click", function(){
+    var active = $("#svcTabs .pillbtn.active"), key = active ? active.getAttribute("data-svc") : "websites";
+    var m = SVC_FORM[key] || SVC_FORM.websites;
+    prefill(m[0], "I'd like to start with " + m[1] + ". Here's my project:");
+  });
+
+  /* intake form — WIRED: sends to Glam's inbox via FormSubmit */
   $("#intakeForm").addEventListener("submit", function(e){
     e.preventDefault();
-    var name = $("#fName").value.trim(), type = $("#fType").value, msg = $("#fMsg").value.trim();
-    var box = $("#formSuccess");
-    if (!name || !msg){
-      box.innerHTML = "🦋 One quick thing, boo — add your <strong>name</strong> and a line about your <strong>project</strong>, then hit send again. (Demo check — nothing sends.)";
+    var name = $("#fName").value.trim(), email = $("#fEmail").value.trim(),
+        type = $("#fType").value, budget = $("#fBudget").value, msg = $("#fMsg").value.trim();
+    var box = $("#formSuccess"), btn = $("#sendBtn");
+    if (!name || !email || !msg){
+      box.innerHTML = "🦋 One quick thing, boo — add your <strong>name</strong>, your <strong>email</strong>, and a line about your <strong>project</strong>, then hit send again.";
       box.classList.add("show");
       box.scrollIntoView({behavior:"smooth", block:"center"});
       return;
     }
-    box.innerHTML = "✨ <strong>Got it, " + name.replace(/</g,"") + "!</strong> In the real version, this " + (type ? "<strong>" + type.replace(/</g,"") + "</strong> request" : "request") + " would land straight in Glam’s intake queue and she’d reply personally. <br><span style='font-weight:500'>This is the demo, so nothing was sent — but that glow you’re feeling? That’s what your client feels when it’s this easy.</span> 🦋";
-    box.classList.add("show");
-    box.scrollIntoView({behavior:"smooth", block:"center"});
+    btn.disabled = true; btn.textContent = "Sending… ✦";
+    fetch("https://formsubmit.co/ajax/glamorousgrammyglowup@gmail.com", {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "Accept": "application/json"},
+      body: JSON.stringify({
+        _subject: "🦋 New Built By Glam project request — " + name,
+        _template: "table",
+        Name: name, Email: email, Project_Type: type || "Not sure yet",
+        Budget: budget || "Not sure yet", Project_Details: msg
+      })
+    }).then(function(res){
+      if (!res.ok) throw new Error("send failed");
+      return res.json();
+    }).then(function(){
+      box.innerHTML = "✨ <strong>Sent, " + esc(name) + "!</strong> Your " + (type ? "<strong>" + esc(type) + "</strong> request" : "request") + " just landed in Glam’s inbox and she’ll reply personally to <strong>" + esc(email) + "</strong>. That glow you’re feeling? That’s what your client feels when it’s this easy. 🦋";
+      box.classList.add("show");
+      box.scrollIntoView({behavior:"smooth", block:"center"});
+      btn.textContent = "Sent ✨ Send Another?";
+      btn.disabled = false;
+      e.target.reset();
+    }).catch(function(){
+      var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nProject type: " + type + "\nBudget: " + budget + "\n\n" + msg);
+      box.innerHTML = "🦋 The send button hiccuped — no worries, tap here instead and your email app opens with everything filled in: <a href='mailto:glamorousgrammyglowup@gmail.com?subject=" + encodeURIComponent("New Built By Glam project request — " + name) + "&body=" + body + "' style='color:var(--sapphire);font-weight:800'>Email my request to Glam →</a>";
+      box.classList.add("show");
+      box.scrollIntoView({behavior:"smooth", block:"center"});
+      btn.disabled = false; btn.textContent = "Send My Project Request ✨";
+    });
   });
 
   /* back to top */
